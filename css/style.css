@@ -1,0 +1,190 @@
+@keyframes moveToCorner {
+   0% {
+    top: 40%;
+  left: 48%;
+	}
+	
+	50% {
+  top: 40%;
+  left: 2%;
+	}
+
+	100% {
+  top: 4%;
+  left: 2%;
+  } 
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+*:focus{
+  outline: none;
+}
+
+body{
+background-color: #a8bd97;
+background-image: url(http://www.transparenttextures.com/patterns/az-subtle.png);
+}
+
+/*****
+Title
+*****/
+.title1{ 
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 5em;
+  text-shadow:3px 5px 5px #999;
+}
+/*****
+Magnifying glass
+*****/
+searchContainer{
+  position: relative;
+  border: 5px solid red;
+  height: 100px;
+  width: 200px;
+}
+
+.moveMe{
+  position: absolute;
+  z-index: 0;
+  top: 40%;
+  left: 48%;
+  width: 800px;
+  height: 100px;
+}
+
+
+.searchContainer a{
+  position: absolute;
+  
+}
+
+form{
+  position: absolute;  
+  margin: 0 auto;
+}
+
+.moveMe:target{
+  animation: moveToCorner;
+  animation-duration: 6s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;	
+	animation-direction: normal;
+	animation-delay: 0;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+}
+
+.glass{
+  font-size: 60px;
+}
+.searchbox{
+  display: none;
+} 
+
+
+form{
+  display: inline-block; 
+}
+input{
+  padding: 26px 0;
+  background-color:orange;
+  padding-left: 100px;
+  border: none;
+  height: 50px;
+  width: 90%;
+  border-radius: 50px;
+  font-size: 2em;
+  transform: translate(-20px, -20px);
+}
+
+#click{
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  margin-top: 120px;
+}
+/*****
+Wiki Entry
+*****/
+
+.wikiEntry{  
+  display: none;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 90%;
+  background-color: #dfc7a7;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+@keyframes grow {
+   0% {
+	}
+	
+	100% {
+transform: scale(1.1);
+  } 
+}
+
+.wikiEntry:hover{
+  animation: grow;
+  animation-duration: .5s;
+  animation-timing-function: ease;
+	animation-iteration-count: 1;	
+	animation-direction: normal;
+	animation-delay: 0;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+}
+
+.wikiEntry:first-child{
+  margin-top: 100px;
+}
+
+/* Flaired edges, by Tomas Theunissen */
+hr.style-seven {
+    height: 20px;
+    width: 90%;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr.style-seven:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+  
+
+.title{
+  z-index: 100;
+  font-size: 2em;
+  padding: 10px;
+}
+.description{
+  padding: 10px;
+  padding-top: 0px;
+}
+
+.title2 {
+  display: none;
+  width: 98%;
+  text-align: right;
+  margin-top: -50px;
+  font-size: 4em;
+  text-shadow:3px 5px 5px #999;
+}
